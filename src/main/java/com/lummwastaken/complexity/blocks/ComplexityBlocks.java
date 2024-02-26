@@ -62,7 +62,7 @@ public class ComplexityBlocks {
     	() -> new CustomBlock(
     		pBlockBase()
     			.requiresCorrectToolForDrops(),
-    		5, 	 // sets explosionRadius
+    		5,   // sets explosionRadius
     		true // sets createsFire
     	),
     	new Item.Properties()
