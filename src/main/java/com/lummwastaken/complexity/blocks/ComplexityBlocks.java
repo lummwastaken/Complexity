@@ -61,7 +61,7 @@ public class ComplexityBlocks {
     public static final RegistryObject<Block> CUSTOM_BLOCK = register("custom_block",
     	() -> new CustomBlock(
     		pBlockBase()
-    		.requiresCorrectToolForDrops(),
+    			.requiresCorrectToolForDrops(),
     		5, 	 // sets explosionRadius
     		true // sets createsFire
     	),
