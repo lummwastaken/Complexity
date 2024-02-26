@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": {
+			"model": "complexity:block/custom_block"
+		}
+	}
+}

@@ -3,6 +3,8 @@
 	"item.complexity.custom_item": "Useless Item",
 	
 	"block.complexity.banana_block": "Bananana Block",
+	"block.complexity.custom_block": "Useless Block",
 	
-	"itemGroup.example_tab": "Example Tab"
+	"itemGroup.example_tab": "Example Tab",
+	"itemGroup.example_tab_2": "Example Tab 2"
 }

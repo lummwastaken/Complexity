@@ -42,6 +42,12 @@ public class Complexity {
     			return new ItemStack(ComplexityItems.TEST_BANANA.get());
     		}
     	};
+    	// another creative mode tab
+    	public static final CreativeModeTab EXAMPLE_TAB_2 = new CreativeModeTab("example_tab_2") {
+    		public ItemStack makeIcon() {
+    			return new ItemStack(ComplexityBlocks.BANANA_BLOCK.get());
+    		}
+    	};
     }
     
     public static void register(IEventBus eventBus) {

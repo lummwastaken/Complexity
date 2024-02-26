@@ -12,13 +12,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class ComplexityItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Complexity.MOD_ID);
 	
-	// object for default item properties; apply methods to pBase as demonstrated with the test banana
-	private static Item.Properties pBase = new Item.Properties();
-	
 	// example item
 	public static final RegistryObject<Item> TEST_BANANA = ITEMS.register("test_banana", 
 		() -> new Item(
-			pBase
+			new Item.Properties()
 				.stacksTo(16)
 				.food(new FoodProperties
 					.Builder()
@@ -29,20 +26,19 @@ public class ComplexityItems {
 	);
 	
 	// example item with more functionality; replace all Item class with the custom item class
-	private static Item.Properties pFoilBase = new FoilItem.Properties();
 	public static final RegistryObject<Item> CUSTOM_ITEM = ITEMS.register("custom_item", 
 		() -> new FoilItem(
-			pFoilBase
+			new FoilItem.Properties()
 				.fireResistant()
 				.tab(Complexity.Tabs.EXAMPLE_TAB)
 		)
 	);
-		// create a new static item class extending Item that has enchant glow
+		// create a new static item class extending Item
 	public static class FoilItem extends Item {
 		public FoilItem(Properties properties) {
 			super(properties);
 		}
-		
+		// this custom item will always have enchant glow
 		public boolean isFoil(ItemStack stack) {
 			return true;
 		}
