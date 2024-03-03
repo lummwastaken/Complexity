@@ -3,9 +3,9 @@ package com.lummwastaken.complexity.content.registry;
 import static com.lummwastaken.complexity.Complexity.REGISTRATE;
 
 import com.lummwastaken.complexity.Complexity;
-import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.minecraft.world.level.block.Block;
+
 
 @SuppressWarnings("unused")
 public final class CBlocks {
