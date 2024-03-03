@@ -1,17 +1,15 @@
 package com.lummwastaken.complexity.content.infrastructure.data;
 
-import com.google.common.base.Preconditions;
-import com.google.gson.JsonObject;
-
-import com.lummwastaken.complexity.Complexity;
 import com.simibubi.create.foundation.utility.FilesHelper;
-
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-import java.util.Map.Entry;
+import com.google.common.base.Preconditions;
+import com.google.gson.JsonObject;
+import com.lummwastaken.complexity.Complexity;
 
+@SuppressWarnings("unused")
 public class CDataGen {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -21,7 +19,6 @@ public class CDataGen {
     }
 
     private static void genLang() {
-        provideDefaultLang("tooltips");
         providePonderLang();
     }
 

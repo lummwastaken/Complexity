@@ -48,17 +48,17 @@ public class Complexity {
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         final IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
-        modEventBus.addListener(EventPriority.LOWEST, CDataGen::gatherData);
-        REGISTRATE.registerEventListeners(modEventBus);
 
         CBlocks.register();
         CFluidTypes.register();
         CMaterialItems.register();
 
         MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(EventPriority.LOWEST, CDataGen::gatherData);
+        REGISTRATE.registerEventListeners(modEventBus);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ComplexityClient.clientStartup(modEventBus, forgeEventBus));
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC, "complexity-common-config.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC, "complexity-common.toml");
 
         // Register ourselves
         modEventBus.addListener(this::commonSetup);
